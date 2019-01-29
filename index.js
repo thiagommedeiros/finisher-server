@@ -95,6 +95,6 @@ io.on('connection', onConnect)
 
 
 // start server
-http.listen(3000, function(){
-  console.log('listening on http://localhost:3000')
+http.listen(process.env.PORT || 8888, function () {
+  console.info(`Server is listening on port: ${this.address().port}`)
 })

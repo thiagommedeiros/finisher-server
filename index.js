@@ -14,8 +14,8 @@ const onConnect = socket => {
     const userAlreadyExists = users.find(user => user.id === id) 
     
     if (!userAlreadyExists) {
-      if (name === 'Professor Thiago' || name === 'Professor Thomaz') {
-        socket.emit('isAdmin', true)
+      if (name === 'Professor') {
+        emitUsersState()
 
         console.log(`Admin ${name} is connected.`)
 
